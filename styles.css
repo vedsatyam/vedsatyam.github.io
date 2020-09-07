@@ -452,7 +452,8 @@ Regular menu items
   text-decoration:none;
   padding:0.3rem 0; /* avoid flickin' */
   order:0;
-  color:white
+  color:white;
+  font-size: 15px;
 }
 
 .menu-item a::before { /* dots */
@@ -481,7 +482,7 @@ Sub menu & items
 */
 
 .sub-menu {
-  font-size:1.6rem;
+  font-size:2rem;
   font-weight:normal;
 }
 
@@ -520,7 +521,7 @@ Main menu
     transition: all 4s ease;
     animation: keepMovin4 1s linear infinite;
     height:40%;
-    width:30%;
+    width:25%;
     margin:0px;
     justify-items: center;
     text-align: center;
