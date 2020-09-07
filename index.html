@@ -1,278 +1,148 @@
+
 <!DOCTYPE html>
-<html> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        html,
-body,
-header,
 
-#intro {
-    background: url("https://1.bp.blogspot.com/-GJUUoBmabWk/Xsq0ycH6iKI/AAAAAAAAiRI/3H6hgCs3z1o-G3gCvsp1KmLLpsK_UZwEACNcBGAsYHQ/s1600/graphic.jpg")no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-}
-
-.centre{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0%;
-}
-
-.view {
-    position: relative;
-  }
+<html lang="en">
+    <title>Satyam | Ved ...Homepage</title>
+    <link rel="icon" type="image/ico" href="https://1.bp.blogspot.com/-iOJ4OHYQwt4/XVBgTsWrmcI/AAAAAAAAVDI/QZD6vFoGHNsPzNU6P_23wHjWJJxWuqSZgCLcBGAs/s1600/VedMaster.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Intro Animation | Codegrid</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body onload = "followMouse();">
+        <div class="wrap">
+            <div id="ball"><div class="blobCur"></div></div>
+       </div>
   
-.mask {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.container{
-    width: 100%;
-    height: 65%;
-    display: flex;
-    justify-content: center;
-    background: rgba(240, 248, 255, 0.534) ;
-    
-}
-
-.container:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-@media screen and (max-width: 900px) {
-  .box {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .box {
-    width: 100%;
-  }
-}
-
-.box{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    background: rgb(240, 248, 255, 0.3) ;
-    margin: 1%;
-    border-radius: 0.2cm;
-    border-bottom-right-radius: 0.2cm;
-}
-
-.title{
-    background-color: rgb(255, 255, 255);
-    border-radius: 0.1cm;
-    text-align: center;
-    font-size: 3vw;
-    margin: 4%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(255, 255, 255, 0.1);
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-
-}
+       <script type="text/javascript">
   
-li{
-    float: right;
-}
-
-li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover{
-    background-color: #111;
-}
-
-.active{
-    background-color: #ff7300;
-}
-
-.about{
-    height: fit-content;
-    width: 35%;
-    border-bottom-right-radius: 0.5cm;
-    border-top-right-radius: 0.5cm;
-    background-color: white;
-}
-.titleAbtMe{
-    padding: 5%;
-}
-.aboutMeImg{
-    width: 25%;
-    height: 50%;
-
-}
-.decript{
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-}
-.descriptionAbtMe{
-    font-size: 1vw;
-    padding: 5%;
-    width: 80%;
-}
-.social{
-    position: relative;
-    height: fit-content;
-    margin-right: 2%;
-}
-.account{
-    height: 40px;
-    width: 40px;
-    padding: 1%;
-}
-.description{
-    background-color: rgba(223, 223, 223, 0.411);
-}
-.projects{
-    height: fit-content;
-    display: flex;
-    padding: 2%;
-}
-.imageProjects{
-    height: 40%;
-    width: 40%;
-    padding: 0.2cm;
-}
-.descriptProj{
-    font-family: monospace;
-    padding: 5%;
-    background-color: white;
-    border-radius: 0.2cm;
-    width: 100%;
-    font-size: 1vw;
-}
-.VeedahTitle{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.btndiv{
-    background-color: rgba(255, 0, 0, 0);
-    justify-content: center;
-    display: flex;
-    border-bottom-right-radius: 2cm;
-    border-bottom-left-radius: 2cm;
-}
-.btn {
-  background-color: #1eff0096; /* Green */
-  border: none;
-  color: white;
-  padding: 5px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 8px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-}
-.bridge{
-    height: 100%;
-    width: 100%;
-}
-    </style>
-    
-<head>
-    
-    
-    <title>Ved | Homepage</title>
-    
-    
-</head>
-<body>
-    <link rel="icon" type="image/ico" href="https://1.bp.blogspot.com/-ljboYBZA2CU/Xsq0VYr1UeI/AAAAAAAAiQ4/VGH0657Qa4IRD4LukvAHZwArMguSWxwOwCNcBGAsYHQ/s1600/Icon-512.png">
-    
-    <div id="intro" class="view">
-        
+       var $ = document.querySelector.bind(document);
+       var $on = document.addEventListener.bind(document);
+  
+       var xmouse, ymouse;
+       $on('mousemove', function (e) {
+            xmouse = e.clientX || e.pageX;
+            ymouse = e.clientY || e.pageY;
+       });
+  
+       var ball = $('#ball');
+       var x = void 0,
+            y = void 0,
+            dx = void 0,
+            dy = void 0,
+            tx = 0,
+            ty = 0,
+            key = -1;
+  
+       var followMouse = function followMouse() {
+            key = requestAnimationFrame(followMouse);
+  
+            if(!x || !y) {
+                 x = xmouse;
+                 y = ymouse;
+            } else {
+                 dx = (xmouse - x) * 0.125;
+                 dy = (ymouse - y) * 0.125;
+                 if(Math.abs(dx) + Math.abs(dy) < 0.1) {
+                      x = xmouse;
+                      y = ymouse;
+                 } else {
+                      x += dx;
+                      y += dy;
+                 }
+            }
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+       };
+  
+       </script>
         
 
-        <div class="mask">
-            
-            <img src="https://1.bp.blogspot.com/-wnH3QRBSQ1M/Xsq0WLXl1sI/AAAAAAAAiQ8/CsoH_5t7r6kvU9cInhbxnq79hspcmUUCACNcBGAsYHQ/s1600/VedCenterwithStiches.jpg" alt="LOGO" height="80%" width="40%" class="centre">
-            
-            
-        </div>
-        
-        
-        
-    </div>
-    <div class="container">
-        <div class="box">
-            <iframe style="height: 100%; width: 100%; border-radius: 0.2cm;" src="https://vedsatyam.000webhostapp.com/completed.html"></iframe>
-            
-        </div>
-        <div class="box">
-            <iframe style="height: 100%; width: 100%; border-radius: 0.2cm;" src="https://vedsatyam.000webhostapp.com/working.html"></iframe>
-    
-        </div>
-        <div class="box">
-            <iframe style="height: 100%; width: 100%; border-radius: 0.2cm;" src="https://vedsatyam.000webhostapp.com/ideas.html"></iframe>
-            
-        </div>
-        
-    </div>
-    <br><br>
-    <div class="about">
-        <div class="titleAbtMe">Satyam Prakash Gupta</div>
-        <div class="decript">
-            <img src="https://pbs.twimg.com/profile_images/1164603021399134210/aqKidU3Y_400x400.jpg" alt="" class="aboutMeImg">
-            <div class="descriptionAbtMe">Hello, Satyam Here! This website will give you an insight to my projects. These projects are a combination of my interests and ideas paving my way to conquer the world ;)</div>
-            <div class="social">
-                <div class="account">
-                    <a href="https://instagram.com/satyamgupta_ved" class="insta">
-                        <img height="100%" width="100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="" >
-                    </a>
-                    
-                </div>
-                <div class="account">
-                    <a href="https://www.facebook.com/prakashsatyamgupta" class="facebook">
-                        <img  height="100%" width="100%" src="https://www.facebook.com/images/fb_icon_325x325.png" alt="">
-                    </a>
-                </div>
-                <div class="account">
-                    <a href="https://www.linkedin.com/in/satyamprakashgupta/" class="linkedin">
-                        <img height="100%" width="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA8FBMVEUiWYL////+/v4gWoL//vwiWIMiWIWdvtmcsbodW4YPTnIQSG4iWYEmVoL8//8eWof0//8dVHtRb4kjUnTb8fwMR2lYeJPg8vkdS20PSGfC1d7c7vEHRW4jWX7//vknV3uWq7sbWoy7z9wdXIDq+v8NT3wyX4Dt//8xVnT/+O+pvMoPTXtTfJyWscUNQWS3x9TV4ulzkKYmS2VLco9QbIsARniFpL7H2N9XdoegwMwcW5EYUG5Yh6d1iZeCn69igpocQFt/lqlAZX+52/TG3+REZnt4mbUyXXmsyNoAO2mos7wuUGuMtMzY4uVCa49qhJ83efuDAAAPsUlEQVR4nO2djV/aSBrHJySTdsg4LyICShKxQa3dotTdul5vpXW9q3fdPf///+aeZwJWkSSDgAT0tx+7rRDIN8/zzMszTybEqziOEKKCctZE3ntPKFGJPPwHqaTygE81jt+ug/YbgIdERgSRQY5oHG8H7Q/VldcX+PllXzleRQhjQwGAYE718ainaacj2SrLHSqsb54IE3aVlFCo0+0PTFIqpb/SopRQ+AnfubTdb4BnGkLgU/ufqh0pKeGEbqyyCEFGEses0wk2Gw4akaAFd75oxl3tcsLpGgg4GaO8egaIYMPIE40jzdw4DDlxyVpISsLD0O1uNiqeRyKR/Lohw3DZZ7UI/fbZiTxSEcd1Tjlf9tksQjI4FxGpND69CzkG6fpJ1n5XgjgnrXfvwg1/2WezCEnSOhdEXLnuu3g9CakfXApyWut04hhw11DQvR8octH7xz82YraWhKHrftkh/9TSJ2vTEz6Uy1jwBsY460mHciUSrrNeCVdfr4Srr1fC1dcr4eorJRwl4JZ9NovQA8Jln8xC9FK8dJ1lQ8hDmEVSn8Yx/h+T4oxJKcGpYU7COf5Jfb+sCQIbQkyiAiCLCWb8tdaBkdaYm2PICYCSPsfpPkFWNuScUmLs5m/o6uYfb/f3909OLgcHTU19Bi+UlQ5l15Zyim/pdPzg4PI6Ga1Bqt2bflOTdL0nLGuy1aY/NKsArst5cHCcCGGWGkFR5Ah12v8Uui5zw5IT5gtiEPg0//otAbx02RgUvYe/CrFz1Qo5c0ubMLchhEbGdTVtnwhRwZXi0Zo4CBcgk36PQxP0LKf7BFnZEOIs1O0/DeBw2RjDUAmzUi7U5wAa07K2NnZtqWS6uSOciQK3VZd1l7FnOd/pZUUIPtq8UZXJQkLVD0rbY1iN2jivf1YimmxDpBTJwUZZA9Fq9uTWNhPheZMJBbziiZt2uW2YD8jc1gliZBQfmfZHbeuSItp4KdO/Ky/KCMM0EivqvP4s5zu9rAiDCxFFQmXYMIo8IYTaXmEbkqNd4cAQLYsQRzbCeRswElJZuqGNDaEeOBVw0wzAkU7rMoxlp3SjNxvC6iUQRjmBaIo2kytfx74s3Qjcpi2t7jgVDMR8G6ptn8dSxqUmzECsXnsWhM5lFwg7JSXMV82OcK9bYhvmir47TQkLAnFI+DznbS+rlsbahuFq2hAIYdginJwad4G6rMIQvXw5RSvCfZgEYl14rgkPt2tYfVu6WZRtf5gfhTgsT65CQ/gspz2FbHoLPVAVL9tLh2Xwp3Wg43QlCUltKy8KTf7Nc/YCKXlpCfPlw9wCJ/LOZBcVOH0SapP6MOxeTcKO/v3QQcIMG1ZMIXxPdlaXkH46AcLhHP/RVB9mVp443NYSa8fL2tLkqyPjfyXQ5SPMvZy3SZyi+fClmw+lQxvKKg79sHWphLlLSoxucTMBaPoJdNLGUVnTNHZzfErD+gU2KNBmCjEWj9jMHA6apb2Twa4WQ0q3tS+G97fdJ4RxjvfeUf8Oyr725OYX0HLJWNi8MQtrD9M1qbf2A0pKl70YyWplhhIGBO0LBcHo3fWDGILY3jRuy7wwY0nIwQmp/7XfwMZzNLoxC22O2DmoEnNT3LOc7/SyqzbhnLvQ3DSPPjbuloCx2xCH14OWxglF+WZNI01TT+NTt/r923kiTH7UEWr3eBDohZ7eHDQFIYw7YdASNK8Glzegj/3tWlOT8i7+DjVNXRsgMkYl1d2g2253tSbwr9UizEfkEI4uFtWMfhCOlrWTuNMUXspJHIch8e8bjfPS9vQjTdXSkDAMqU/5PZGydhJ3moawIwHRhRFcKsO3oDgc3q48HCjN5CblrL70O7658TxGhbMNCMtJ+G4o05zJzkxuUk7CMAV0sRpy1jgoZyX73fYIYYh+ymdpzspZyU4JZenGCGZmM5PK6aXGR798+QKQ/jAOn3z9S0hIux+CevPsdvAHaDA4a/baHz50n2xJK0IYpBHCOln7wTAYkLuP2gO4+NSFidXEY3wY4sKcE4fyMCrCjnXYs+qg971/vNNI1DCXIFSSbN1c9K/qvRqeSDobn6IDsSL0JW3DhWxPVBC02716IMdqE6nf6ZB6PZh8EB5Xb9Vg9ACEOL02gGE1+PVi63Hm2UPQxv63ONAch/4IaJ2ZtbsbQZ/tnO/k6fymNnZVw5jqq/3cg677muEN5BBiDPxAN7/vnQolBNZYPVzaiiKTxlQ73340MTJhimOHR+zaUmivt5WTWTGEL4jG17F0IudUb6rMY0zObi8AUzCYp7iM8ebVceI4pvJ4PK2OKz+YIMI1vI9HAU3nNZaOatcf6m1lkqWTFOELTqM1TkgkEGYdFaGA0A3T2Aprtb0EUaL7VcgPMnogrJ0Xyd6RhlbBeiXWxkuhyQAbRj/TbHcnmroQZk23gvFLKjv0TGHi6kF2bngcomBtA8ORPHh0a7Crhqt0ADFuerOI7tx50e6gFeNJ2TFaVe4B4aHIqokyaf7HhKHLyNmh42UeZao3JLyNhc2jYxN+6UW8t25w7zvE3XqC56jjH5rZDubs+kONNswOQ/jSR4Rx7IKXOl7GyuqQkIWEudWza8dY1RTjoguPBWIaCZ5JsZv1SnF9EAz9tDAa7QmzztXEibM1Xl7KucwjxDYFbQhtf3CLd+F4P5ftHtfqeg8X9eAzG5tVCa0q5YU7sthlhHMJvZTw0cWUNJcQF8a7HQAcZFdYTxY6NCCau+jmQ0hGhBMjqogwS15qw2CglONlLKBnxTBcHtU4imnHojbCqrdYiA0dQ2jqPHLeNNmIZmH2/IjLDiscv9nd2bUwQnrUEI8aFitC+OO4zjrFHf80Xprlbk/zUtPS9M4FEk7jo+mxaHfVr1oMbaaKw7naEOPwP5+domKyLGEcN76T+RAuyEsdZy88rDx901uIxY8BKewRl0Volsv/m3W3mJ0qlWRTy6J1hXnEoXhCHJoB9oTx2XQSx9XCwdvy4tB0gbOYEP3g8EgWLT4vs7fwvKn7iQfCQp6P7aJp1BJtODOhU4HBW71oH7ZlxeE8JGBKLAZFheVLtKEjHtVXTSccLIj9esEK5lL7w5+pn1FyZmid+7/KI8TETavENrz/GSMcM8e9+13BUdjZiO2CapCSxOGkjrG4t0QjpuOaQsKlzJ4y7Zj+1aaZhUmGuJ4D4eLi8B5d5I0TRsWQSHjYzF98K0kcRumNqOr0HHR6rrCVxa1F8i9LBQnVbX4gLj6LYZOgwJM93Lm8iuu9XtDr9eKrz9dKmcrynKOQMPLEZTe3zy+JDUWy96PX3ZDDZW3pd3tXJ5gY9rIXE5xhOmO/jasYmX3GcvvD4SxKqL9o98E3+tQNe7cN4b33lMr11opzGlBJzUrdkwkXlMVID8acUuOP4OHoklLKeNg8OkUbifxbkB2FVUzzIVyEDRFhd3P8YNzTiLlaG8QJt3g8MKI6IMU2XF5vgbuGwER9LIzQhlj3qLcTvBUgJxShIVMDnOjzrO1jbNYPF0oo1LcW64wd6vtgQ+l3ZPARhy0F4/PLKtaHZWWGlzxq8yoKJgd0/PIjoetKn5F4CzuF3M9w9ppMZieGlxyHnqeuNOHjczxfpmWQnHX3itONb5t0RsIFein2Zj59TOibjf5IyORBUki4U2W4e34G45JtWFHbNCczHzMZnOTdYm30d7UThpn7Ni45DsVpj+WUHoINq5dFcygk5KH0c21YUKiwwLYUW4lME3Ig1FdJpWCO8XeAhPleurT+UEBfmNNKcMJ4rZHf4zvOrrEhK2EcwpTiMCAy5wk+LrwS7BcSBvMinHccwsnttKWkmflAl0FH/uEiswxk+DHqf0joltCGYMSbLgwn4zBjkg6EIaN9UZRzOwNCNgvhIuIQJ0QwqO6b+Xmml/ow3NS3Rd2F2vQhlucytxi5xUMnKSSc5NkwLaxEFWfQnfR9P7+Yu1TfioxvvvPSzQ1oj/05Eo59wVOyGEjoRRWxmb+sYgivVH4iBG0Ixs4nfP5sIs76Iif5VHBpOYRiKyny0m300lkIF7IGbOa+SbOQ0A1byeSPuEe4UUhYoAXVYniiUUC4wbkhLPDSuRHO04YO5kjFVhEheFf4afE2XNgacKENYazJnsNLFxOHwoLQ5Ru+22osnHAhtRimTLSAEJq+lHAV49DKhneEs9twGb3F8xIW6MUQvsbhZMJVsOFrHK4PYVZIPWVcCnE4BeHscbiM2dNrfzhfwgItoFJhOi/NddNyEnolJVxbL305cZihlegt7AhX2Ybr31s8fy3GasXh6+yp/DZ8OV66/oSrHIfPX4vx2h/Om7BAL4YwK6Rex6Xlt+ELisPJTvIMWYxn89LRR05HOLna5ElZjIxqk9ds4mt/uKhRWxnjcG1tuP5euv6E6zB7siNcZRu+9hYvhfA1DicTroINX+PwSYTTzS2eiTArpFYhi/E6e1p9wgKtfRZjATacttqkwIbF91sUIRrCPDlb45sZpXtBZx9lczcCEFIaAmH+d6MNs/cxtbIhr+E+whm7XZvTFY2v44+rdt1481BknlZ6VFGtPpx2/DXJ/JT0ow63a8CXtTW03W7X+pet3Xz92Rz3Upfrs6Kjrgv2eMKt5ePmdcGn7AIhy7yZ2Iqw41Ota3nSdHxjOB66nOvaj6wDavCS5sWEgJj7zUYcN4ae4T5gJs0GMHT0BJ8xmQ+X45v7AWHG+40YwScGFD20Aj8Xb4TO+SB8ohDJ29zbZv0wfT5D1tf4SAhN2SNCbh4aKCdfFea6SJgPCMI99PP5qHmugsx8xKTdsxHCIeToF+a/0d/hx3388XgEXBR/zHmGh3LzuCirx1Rga8MffufYWeAlyD7eqreA622eQpH9uvvoS1KAzK9On9pRtDO+eYPVc3SyHx5mRQguNcFKP89jooPn22jo9kXfbN5a9AbK856CWsLnzMxZL4WwoBZjpVXOZ3bNUy/FS9dZ608IAz8ghKE1n/0ZbuUU9f22ISTrTWhGz2tKSEwcUhz6rCkgTNGAUJvta0r7iPuZBIT1NyTUMF3N2qRnxRW6vPeG/BWELnNL/3jmJwk8Ewjf1Nc0CImZOcYJUUd+h2bmVFdcsjtQRPS7nZyN4VZaTAYXDnG22pK5cVj8/tWTJN+TiESqryWJx9PWayBOWHDsAKHYbRG2joSE6KskiogXieMmLXqu0CqKkt65iDwiovfq9rfMTU5XWe1jfJIJwcX4pN+Lqcsk1evR8/MwpJI2LwSwGcKKSI7rGghx9+9ln91c5GqugwtllmiJwOVKpfYPAnyC6Xp0/FLq1uauSresJ8PnKKvGxyNgLHoKVsk1zBvS9tk+cL2PUhumhEI46s33cMUbnCHhwRvlVJzhfu7/B+27Ef/etfe9AAAAAElFTkSuQmCC" alt="">
-                    </a>
-                </div>
-                <div class="account">
-                    <a href="https://twitter.com/SatyamPrakashG2" class="gmail">
-                        <img height="100%" width="100%" src="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_gmail-512.png" alt="">
-                    </a>
-                </div>
+        <div class="container">
+            <div class="text-wrapper">
+                <div class="text-1 text">Ved</div>
+                <div class="text-2 text">Ved</div>
+                <div class="text-3 text">Ved</div>
+                <div class="text-4 text">Ved</div>
+                <div class="text-5 text">Ved</div>
+                <div class="text-6 text">Satyam</div>
+                <div class="text-7 text">Ved</div>
+                <div class="text-8 text">Ved</div>
+                <div class="text-9 text">Ved</div>
+                <div class="text-10 text">Ved</div>
+                <div class="text-11 text">Ved</div>
             </div>
-    
+        </div>
+        <div class="header">
+             
+         
+            <div class="logo">
+                
+                <img src="https://1.bp.blogspot.com/-wnH3QRBSQ1M/Xsq0WLXl1sI/AAAAAAAAiQ8/CsoH_5t7r6kvU9cInhbxnq79hspcmUUCACNcBGAsYHQ/s1600/VedCenterwithStiches.jpg" alt="LOGO" height="80%" width="40%" class="centre1">
+                
+                
+                    
+                </a>
+
+
+            </div>
+
+            <div class="logo1">
+
+
+                 <img src="https://1.bp.blogspot.com/-GEFG9-HqRZo/X1U8rIFlL8I/AAAAAAAAmFo/keEk5wleMssezpS-bUPU7htHnXGBFUZPgCNcBGAsYHQ/s400/website.jpg" alt="img" height="100%" width="100%" class="btn1">
+                 
+                 <nav class="menu">
+                    <ol>
+                      <li class="menu-item"><a href="#0">Home</a></li>
+                      <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/02/so-what-exactly-is-ved.html">About</a></li>
+                      <li class="menu-item">
+                        <a href="https://vedsatyam.blogspot.com/2020/02/ved-projects.html">Tech Projects</a>
+                        <ol class="sub-menu">
+                          <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/06/vedista.html">Ved...insta</a></li>
+                          <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/06/veedah.html">Veedah Robo</a></li>
+                          <li class="menu-item"><a href="#0">Ved Music App</a></li>
+                          <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/06/ved-library-management-system.html">Ved Library Management System</a></li>
+                          <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2019/06/bma-smart-stick.html">BMA Smart Stick</a></li>
+                        </ol>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#0">Ideas</a>
+                        <ol class="sub-menu">
+                          <li class="menu-item"><a href="#0">Blind Man Guide</a></li>
+                          <li class="menu-item"><a href="#0">Democracy? ig</a></li>
+                          <li class="menu-item"><a href="#0">...</a></li>
+                        </ol>
+                      </li>
+                      <li class="menu-item">
+                         <a href="#0">Others</a>
+                         <ol class="sub-menu">
+                           <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/05/the-library.html">Libray at Slavation Army</a></li>
+
+                         </ol>
+                       </li>
+                      <li class="menu-item"><a href="#0">Contact</a></li>
+                    </ol>
+                  </nav>
+                 
+
+            </div>
+           
+            
+           
+           
+            
+               
+            </div>
+            
+
+            
+            
         </div>
         
-    </div>
-    <br style="height:30%">
-    
-    
-    <footer></footer>
-   
-</body>
 
+        
+    </body>
+    
 </html>
