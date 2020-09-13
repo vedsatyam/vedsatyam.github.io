@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Satyam | Ved ...Ideas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/ico" href="https://1.bp.blogspot.com/-iOJ4OHYQwt4/XVBgTsWrmcI/AAAAAAAAVDI/QZD6vFoGHNsPzNU6P_23wHjWJJxWuqSZgCLcBGAs/s1600/VedMaster.png" />
+<body onload = "followMouse();">
+    <div class="wrap" style="z-index: 1;">
+        <div id="ball"><div class="blobCur"></div></div>
+   </div>
+
+   <script type="text/javascript">
+
+   var $ = document.querySelector.bind(document);
+   var $on = document.addEventListener.bind(document);
+
+   var xmouse, ymouse;
+   $on('mousemove', function (e) {
+        xmouse = e.clientX || e.pageX;
+        ymouse = e.clientY || e.pageY;
+   });
+
+   var ball = $('#ball');
+   var x = void 0,
+        y = void 0,
+        dx = void 0,
+        dy = void 0,
+        tx = 0,
+        ty = 0,
+        key = -1;
+
+   var followMouse = function followMouse() {
+        key = requestAnimationFrame(followMouse);
+
+        if(!x || !y) {
+             x = xmouse;
+             y = ymouse;
+        } else {
+             dx = (xmouse - x) * 0.125;
+             dy = (ymouse - y) * 0.125;
+             if(Math.abs(dx) + Math.abs(dy) < 0.1) {
+                  x = xmouse;
+                  y = ymouse;
+             } else {
+                  x += dx;
+                  y += dy;
+             }
+        }
+        ball.style.left = x + 'px';
+        ball.style.top = y + 'px';
+   };
+
+   </script>
+    
+    <div class="logo1">
+        <nav class="menu" style="z-index: 1;">
+            <ol>
+                <li class="menu-item"><a href="#0">Home</a></li>
+                <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/02/so-what-exactly-is-ved.html">About</a></li>
+                <li class="menu-item">
+                <a href="https://vedsatyam.blogspot.com/2020/02/ved-projects.html">Tech Projects</a>
+                <ol class="sub-menu">
+                    <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/06/vedista.html">Ved...insta</a></li>
+                    <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/06/veedah.html">Veedah Robo</a></li>
+                    <li class="menu-item"><a href="#0">Ved Music App</a></li>
+                    <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/06/ved-library-management-system.html">Ved Library Management System</a></li>
+                    <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2019/06/bma-smart-stick.html">BMA Smart Stick</a></li>
+                </ol>
+                </li>
+                <li class="menu-item">
+                <a href="#0">Ideas</a>
+                <ol class="sub-menu">
+                    <li class="menu-item"><a href="#0">Blind Man Guide</a></li>
+                    <li class="menu-item"><a href="#0">Democracy? ig</a></li>
+                    <li class="menu-item"><a href="#0">...</a></li>
+                </ol>
+                </li>
+                <li class="menu-item">
+                    <a href="#0">Others</a>
+                    <ol class="sub-menu">
+                    <li class="menu-item"><a href="https://vedsatyam.blogspot.com/2020/05/the-library.html">Libray at Slavation Army</a></li>
+    
+                    </ol>
+                </li>
+                <li class="menu-item"><a href="#0">Contact</a></li>
+            </ol>
+            </nav>
+
+    </div>
+    
+        <iframe src="https://padlet.com/satyamprakashguptag/ideas" height="100%" width="100%" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0;" > 
+</body>
+</html>
