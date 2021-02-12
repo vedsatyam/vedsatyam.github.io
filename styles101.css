@@ -19,13 +19,27 @@ body {background-color: #5A6B75;
     font-family: 'Monoton', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 150px;
+    font-size: 50px;
     position: absolute;
     top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
+@media only screen and (max-width: 768px) {
+    .header {
+        font-family: 'Monoton', cursive;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1500px;
+        position: absolute;
+        top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
 
 .container1 {
     height: 100vh;
@@ -50,8 +64,8 @@ body {background-color: #5A6B75;
       margin-top: 5%;
   }
   .card {
-    height: 60vh;
-    width: 40vh;
+    height: 100vh;
+    width: 50%;
     background: #0fff07;
     border-radius: 10px;
     transition: 1s;
@@ -64,11 +78,11 @@ body {background-color: #5A6B75;
     position: relative;
   }
   .card0 {
-    background: url("https://1.bp.blogspot.com/-9qo_3uf8TpQ/X_Mmv8AGjgI/AAAAAAAApQE/4x3TGs0RksAKMD9jJZ4UQyCdhmwZbJPeACNcBGAsYHQ/s16000/pictureme.png") center center no-repeat;
-    background-size: 80%;
+    background: url("https://1.bp.blogspot.com/-pR2RSNDozQI/YCXEjt-bcqI/AAAAAAAAp6Q/qc8hAVLpwG82c3gwBsEHKshUEoHOWhG4ACNcBGAsYHQ/s16000/Picture.png") center center no-repeat;
+    background-size: 200%;
   }
   .card0:hover {
-    background: url("https://1.bp.blogspot.com/-9qo_3uf8TpQ/X_Mmv8AGjgI/AAAAAAAApQE/4x3TGs0RksAKMD9jJZ4UQyCdhmwZbJPeACNcBGAsYHQ/s16000/pictureme.png") left center no-repeat;
+    background: url("https://1.bp.blogspot.com/-DmTk6XIHY3k/YCXElix52TI/AAAAAAAAp6U/6MJn_vNkDoM6e71q1YNT70KYH74rvcyTQCNcBGAsYHQ/s16000/idcrd.jpg") left center no-repeat;
     background-size: 100%;
   }
   .card0:hover h2 {
@@ -136,7 +150,7 @@ body {background-color: #5A6B75;
     color: rgb(255, 255, 255);
     text-align: center;
     margin: 2rem 0;
-    background-color: rgba(104, 104, 104, 0.247);
+
   }
   
   .wrapper{
@@ -172,7 +186,7 @@ body {background-color: #5A6B75;
   .front,
   .back{
     background-size: cover;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 4px 8px 0 rgb(37, 37, 37);
     border-radius: 10px;
     background-position: center;
     -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -186,15 +200,15 @@ body {background-color: #5A6B75;
     min-height: 280px;
     height: auto;
     border-radius: 10px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
   }
   
   .back{
-    background: #cedce7;
-    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-    background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
-    background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: #a1a1a141;
+    background: -webkit-linear-gradient(45deg,  #513c3e 0%,#513c3e 100%);
+    background: -o-linear-gradient(45deg,  #513c3e 0%,#513c3e 100%);
+    background: linear-gradient(45deg,  #513c3e 0%,#513c3e 100%);
   }
   
   .front:after{
@@ -292,7 +306,7 @@ body {background-color: #5A6B75;
   }
   
   .front .inner span{
-    color: rgba(255,255,255,0.7);
+    color: rgb(255, 255, 255);
     font-family: 'Montserrat';
     font-weight: 300;
   }
@@ -348,7 +362,7 @@ body {
 	font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	color: #fff;
-	background: radial-gradient(ellipse at bottom, #576980 0%, #050608 100%);
+	background: radial-gradient(ellipse at bottom, #324f5a 0%, #324f5a 100%);
 	background-attachment: fixed;
 }
 
@@ -889,4 +903,43 @@ p{
     .text {
         font-size: 24px;
     }
+}
+
+/* fonts  */
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+
+
+#container-info{
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+	height: fit-content;
+	width: 50%;
+	
+}
+
+
+
+/* 	Product details  */
+.product-details {
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	padding: 30px;
+	height: 100%;
+	float: left;
+
+
+}
+
+
+#container-info .product-details > p {
+	font-family: 'Farsan', cursive;
+	text-align: center;
+	font-size: 20px;
+	color: #7d7d7d;
+	
 }
