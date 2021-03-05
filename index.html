@@ -4,6 +4,7 @@
 
 <html lang="en">
 <head>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'><link rel="stylesheet" href="./style_stra.css">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=East+Sea+Dokdo&family=Monoton&display=swap" rel="stylesheet"> 
@@ -14,6 +15,13 @@
     <link rel="stylesheet" href="styles101.css">
 </head>
 <body>
+
+ 
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script src='https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js'></script><script  src="./script_stra.js"></script>
   <div class="introduction">
     <div class="text-wrapper">
         <div class="text-1 text"></div>
@@ -29,6 +37,7 @@
         <div class="text-11 text"></div>
     </div>
 </div>
+
   <div id="blackhole">
     <div class="description">
       
@@ -50,68 +59,47 @@
       <div class="neptune"></div>
       <div class="pluto"></div>
       <div class="asteroids-belt"></div>
+      <div class="satyam_pic"></div>
+      
     </div>
-    
+    <canvas id="stars"></canvas>
+    <canvas id="satyam" style="z-index: -3;"></canvas>
   </div>
   
-  <div class="con">
+  
+  <div class="contaray" >
+    
+  <div class="con" >
+    
     <div class="tit">
       <div class="header">Welcome!
       </div>
-      
-
     </div>
     
-    
-    <div class="container1">
-      <div id="container-info">	
-        <div class="product-details">
-                      
+    <div class="container1" style="z-index: 1;">
+      
+      <div id="container-info" style="z-index: 1;">	
+        
+        
+        <div class="product-details" style="z-index: 1;">
+          
           <!-- 	Product Name -->
       
           
           <h6 style="color: black; font-size: 16px;">Just Random Facts that do relate to the context</h6>
       <!-- The most important information about the product -->
-          <p class="information">" Hi there! Another one of your earth things here, probably not the hardest species to find out there (well… its debatable). I enjoy working on projects that usually involve solving problems, and we all know there many solutions to a problem but being a techie living in the 21st Century technology guides the path. In this pursuit I’ve watched tons of Youtube videos to learn computer languages such as Python, Java-scripts, C#, C and HTML-CSS (which I am using right now to make this website). I enjoy talking to people about these projects and seeing their eyes widen when I talk about how the algorithm working behind the scenes, and its implementation. I enjoy this so much that I end-up over celebrating the prototype of my projects and end up wasting time. Its kinda bad but I’ll grow out of this habit. Check out some of my projects here at this website, and contact me though instagram if you want to learn more, <a class="noneo" href="https://www.instagram.com/satyamgupta_ved/"  style="color:grey">https://www.instagram.com/satyamgupta_ved/</a>"</p>
-      
-          
-          
-      
-              
-      </div>
-      </div>
-      
-    
-        <div class="card card0">
-          
-          <div class="border">
-            <div class="backdrop">
-              <div class="hobbies"></div>
-
-              </div>
-              
-            <div class="icons">
-              
-    
-              <a class="fa fa-codepen" aria-hidden="true" href="https://www.instagram.com/satyamgupta_ved"><img src="https://1.bp.blogspot.com/-adFFkPD71Dk/X_NLIQmwiII/AAAAAAAApRE/_nP5UhiE9dkgTQ4y4ZLh-AkNNcSduAUYACNcBGAsYHQ/s320/insta4.png" class="instagram"></a>
-              <a class="fa fa-codepen" aria-hidden="true" href="https://www.instagram.com/satyamgupta_ved"><img src="https://1.bp.blogspot.com/-5RrLbLiEtzk/X_NLNckH7pI/AAAAAAAApRI/DNZWYTxUNV4XsX3e67BSgEM46UtauiULQCNcBGAsYHQ/s512/github.webp" class="instagram"></a>
-              <a class="fa fa-codepen" aria-hidden="true" href="https://www.instagram.com/satyamgupta_ved"><img src="https://1.bp.blogspot.com/-36p593NtCXo/X_NLTzZ4abI/AAAAAAAApRM/zya2sFD1sWIAV-cO-Rv03d6c3eds2QjGACNcBGAsYHQ/s320/gmail2.png" class="instagram"></a>
-              <a class="fa fa-codepen" aria-hidden="true" href="https://www.instagram.com/satyamgupta_ved"><img src="https://1.bp.blogspot.com/-9vqTF6YODkE/X_NLT-ckvDI/AAAAAAAApRQ/GZ0wn-br75MoLKBcxZM2uaF3iez2fgU8ACNcBGAsYHQ/s320/linkdin.png" class="instagram"></a>
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              
-            </div>
-            
-            
-          </div>
-          
+          <p class="information" style="z-index: 1;">" Hi there! Another one of your earth things here, probably not the hardest species to find out there (well… its debatable). I enjoy working on projects that usually involve solving problems, and we all know there many solutions to a problem but being a techie living in the 21st Century technology guides the path. In this pursuit I’ve watched tons of Youtube videos to learn computer languages such as Python, Java-scripts, C#, C and HTML-CSS (which I am using right now to make this website). I enjoy talking to people about these projects and seeing their eyes widen when I talk about how the algorithm working behind the scenes, and its implementation. I enjoy this so much that I end-up over celebrating the prototype of my projects and end up wasting time. Its kinda bad but I’ll grow out of this habit. Check out some of my projects here at this website, and contact me though instagram if you want to learn more, <a class="noneo" href="https://www.instagram.com/satyamgupta_ved/"  style="color:grey">https://www.instagram.com/satyamgupta_ved/</a>"</p>     
           
         </div>
-        
-        
+      
+      </div>   
     </div>
-    
   </div>
-  
+
+    
+
+</div>
+
     <div class="wrapper">
       <h1>Projects</h1>
       <div class="cols">
@@ -247,4 +235,5 @@
    
   
 </body>
+
 </html>
