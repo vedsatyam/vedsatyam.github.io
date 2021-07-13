@@ -63,34 +63,7 @@ body {background-color: #5A6B75;
   .div{
       margin-top: 5%;
   }
-  .card {
-    height: 100vh;
-    width: 50%;
-    background: #0fff07;
-    border-radius: 10px;
-    transition: 1s;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 70px 63px -60px #000;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-  }
-  .card0 {
-    background: url("https://1.bp.blogspot.com/-pR2RSNDozQI/YCXEjt-bcqI/AAAAAAAAp6Q/qc8hAVLpwG82c3gwBsEHKshUEoHOWhG4ACNcBGAsYHQ/s16000/Picture.png") center center no-repeat;
-    background-size: 200%;
-  }
-  .card0:hover {
-    background: url("https://1.bp.blogspot.com/-DmTk6XIHY3k/YCXElix52TI/AAAAAAAAp6U/6MJn_vNkDoM6e71q1YNT70KYH74rvcyTQCNcBGAsYHQ/s16000/idcrd.jpg") left center no-repeat;
-    background-size: 100%;
-  }
-  .card0:hover h2 {
-    opacity: 1;
-  }
-  .card0:hover .fa {
-    opacity: 1;
-  }
+  
 
   .fa {
     opacity: 0;
